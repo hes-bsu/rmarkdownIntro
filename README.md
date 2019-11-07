@@ -28,4 +28,4 @@ note the name of my local branch in the top left corner - if this still say 'mas
 
 ![alt text](images/whichbranch.png)
 
-
+7. Go to the "Pull Request tab" and click "new pull request". Leave the "base:" set to master and change the "compare:" to the name of your branch.
