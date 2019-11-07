@@ -57,7 +57,7 @@ Then I switch it to "FALSE" when i'm ready to move towards a final product. I'll
 Regression<-lm(Assault ~ UrbanPop, USArrests) 
 
 #plot the regression line on top of a scatter plot 
-with(USArrests, plot(UrbanPop,Assault,xlab = "Urban Population", ylab = "Assault arrests (per 100,000)" )) 
+with(USArrests, plot(UrbanPop,Assault,xlab = "Percent Urban Population", ylab = "Assault Arrests (per 100,000)" )) 
 abline(Regression)
 ```
 
