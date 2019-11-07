@@ -19,7 +19,13 @@ This should create a folder on your computer with this file (README.md) and the 
   
 3. Open FirstTry.Rmd
 
+4. Create a local branch (or fork) of the repository by clicking on the fork ![alt text](images/forkbutton.png) button
+5. Make your changes based on what was assigned to you in the Issue. Be careful to make your changes in the location where they are identified in the document.
+6. Save your file (still as FirstTry.Rmd). This will place the file with a tickbox next to it in your "Git" screen. Select the tickbox next to FirstTry.Rmd and push the commit button. That should open a screen that looks like this 
+![alt text](images/commitscreen.png)
 
+note the name of my local branch in the top left corner - if this still say 'master' don't commit! you haven't switched to your local branch
 
+![alt text](images/whichbranch.png)
 
 
