@@ -50,7 +50,17 @@ Then I switch it to "FALSE" when i'm ready to move towards a final product. I'll
 
 * make a correlation plot of the numeric values in the iris dataset (using the package 'corrplot' )
 
-* plot a regression line of the relationship between UrbanPop and Assault using the 'lm' command and the USArrests data
+* plot a regression line of the relationship between UrbanPop and Assault using the 'lm' command and the USArrests data 
+
+```{r USArrests, echo=TRUE}
+#Create regression between Urban Population and assaumt arrests (per 100,000)
+Regression<-lm(Assault ~ UrbanPop, USArrests) 
+
+#plot the regression line on top of a scatter plot 
+with(USArrests, plot(UrbanPop,Assault,xlab = "Urban Population", ylab = "Assault arrests (per 100,000)" )) 
+abline(Regression)
+```
+
 
 * plot a histogram of the 'weight' variable in the PlantGrowth dataset
 
