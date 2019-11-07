@@ -7,11 +7,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduction
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. R Markdown can do the majority of things a typical word processing program (e.g., Microsoft Word), but requires a bit of knowledge about how the syntax works. There's a lot of help online, but the things I tended to use most when I first started were the RMarkdown Cheat Sheet and Reference guide (got to Help > Cheatsheets inside RStudio) and the [Markdown syntax page](https://daringfireball.net/projects/markdown/syntax).
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+
+
+You can embed an R code chunk like this:
 
 ```{r cars}
 summary(cars)
