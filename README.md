@@ -28,4 +28,6 @@ note the name of my local branch in the top left corner - if this still say 'mas
 
 ![alt text](images/whichbranch.png)
 
-7. Go to the "Pull Request tab" and click "new pull request". Leave the "base:" set to master and change the "compare:" to the name of your branch. Click "Create Pull Request". Enter a message describing the changes you made and issue the pull request. I'll show you what happens next when we're in class together!
+7. Click the "Push" button to send your commits to the remote location on Github
+
+8. Go to the "Pull Request tab" and click "new pull request". Leave the "base:" set to master and change the "compare:" to the name of your branch. Click "Create Pull Request". Enter a message describing the changes you made and issue the pull request. I'll show you what happens next when we're in class together!
