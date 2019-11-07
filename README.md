@@ -13,7 +13,7 @@ This should create a folder on your computer with this file (README.md) and the 
 2. Make sure you're up-to-date
 
   - Go to the "Git" tab in Rstudio (mine shows up in the same window as Environment, History, etc)
-  ![alt text][overview]
+ ![alt text](https://github.com/hes-bsu/rmarkdownIntro/images/gitoverview.png)
   
   - Click the "Pull" button to make sure you've cloned the most recent version
   
@@ -21,5 +21,5 @@ This should create a folder on your computer with this file (README.md) and the 
 
 
 
-[overview]: https://github.com/hes-bsu/rmarkdownIntro/images/gitoverview.png
+
 
