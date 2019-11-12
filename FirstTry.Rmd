@@ -18,7 +18,11 @@ For this exercise, I'm going to assign Issues to each of you via our group page 
 
 This is where you frame the research question you plan to address in your manuscript. You'll probably want to reference some relevant literature (I'll show you this later), clarify where your questions/hypotheses fit in that literature, and maybe even include a conceptual model to help illustrate how the pieces fit together. I'm going to assign an issue on github to a few of you to fill in this part of the document with:
 
+
 * A brief description of a webpage you like along with an inline link to that webpage.
+
+The following is a link to Dr. Matt Williamson's profile on Boise State University's Human Environment Systems website: https://www.boisestate.edu/hes/people/matt-williamson/.
+
 
 * An image along with a brief description of what's in the image and where it came from (note that you should save the image into the "images" folder that clones with the repository)
 
