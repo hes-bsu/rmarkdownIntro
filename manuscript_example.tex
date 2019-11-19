@@ -1,0 +1,320 @@
+\documentclass[11pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+
+
+
+\title{Models incorporating incomplete reporting improve inferences about
+private land conservation \thanks{Template files are available at Steven V. Miller's webpage
+(\url{http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/}).}  }
+
+
+
+\author{\Large Matthew A. Williamson\vspace{0.05in} \newline\normalsize\emph{Boise State University}   \and \Large Brett G. Dickson\vspace{0.05in} \newline\normalsize\emph{Conservation Science Partners, Inc.}   \and \Large Mevin B. Hooten\vspace{0.05in} \newline\normalsize\emph{Colorado State University}   \and \Large Rose A. Graves\vspace{0.05in} \newline\normalsize\emph{Portland State University}   \and \Large Mark N. Lubell\vspace{0.05in} \newline\normalsize\emph{University of California, Davis}   \and \Large Mark W. Schwartz\vspace{0.05in} \newline\normalsize\emph{University of California, Davis}  }
+
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+\usepackage[strings]{underscore} % protect underscores in most circumstances
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+% move the hyperref stuff down here, after header-includes, to allow for - \usepackage{hyperref}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[draft,unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Matthew A. Williamson (Boise State University) and Brett G. Dickson (Conservation Science Partners, Inc.) and Mevin B. Hooten (Colorado State University) and Rose A. Graves (Portland State University) and Mark N. Lubell (University of California, Davis) and Mark W. Schwartz (University of California, Davis)},
+             pdfkeywords = {pandoc, r markdown, knitr},  
+            pdftitle={Models incorporating incomplete reporting improve inferences about
+private land conservation},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Add an option for endnotes. -----
+
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% add some other packages ----------
+
+% \usepackage{multicol}
+% This should regulate where figures float
+% See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
+\usepackage[section]{placeins}
+
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\textbf{\authorfont Matthew A. Williamson} \hskip 15pt \emph{\small Boise State University}   \par \textbf{\authorfont Brett G. Dickson} \hskip 15pt \emph{\small Conservation Science Partners, Inc.}   \par \textbf{\authorfont Mevin B. Hooten} \hskip 15pt \emph{\small Colorado State University}   \par \textbf{\authorfont Rose A. Graves} \hskip 15pt \emph{\small Portland State University}   \par \textbf{\authorfont Mark N. Lubell} \hskip 15pt \emph{\small University of California, Davis}   \par \textbf{\authorfont Mark W. Schwartz} \hskip 15pt \emph{\small University of California, Davis}   
+
+}
+
+}
+
+
+
+
+
+
+
+
+\begin{abstract}
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+    \vskip 8.5pt % \small 
+
+\noindent Developing practical solutions to conservation challenges requires
+prioritization approaches that integrate information describing where
+conservation should occur with that describing where it does occur.
+Empirical evaluation of the arrangement of social, institutional, and
+environmental factors that have previously produced conservation actions
+is a vital step in moving towards a more complete characterization of
+conservation opportunity. Many datasets describing conservation actions
+are incomplete, making analyses of predictors of those actions
+challenging and potentially prone to bias resulting in
+mis-identification of the factors that promote conservation and
+hindering the ability to identify locations where future conservation
+action may be likely. We adapt the occupancy model framework frequently
+deployed in wildlife population studies to the case of partially
+reported conservation actions and compare several different formulations
+of occupancy models to a naive logistic regression. Through a simulation
+study and an empirical evaluation of conservation easements in Idaho and
+Montana (United States), we find that occupancy models that explicitly
+account for the reporting process produce substantially less-biased
+estimates of regression coefficients than logistic regression and are
+robust to incomplete separation of the reporting and suitability
+process. Results from our case study suggest that occupancy-based models
+produced regression coefficient estimates that were more accurate, but
+less precise. Occupancy models also resulted in qualitatively different
+inferences regarding the effects of predictors we evaluated than those
+produced by the naive logistic regression.
+
+
+\vskip 8.5pt \noindent \emph{Keywords}: pandoc, r markdown, knitr \par
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+
+
+\end{abstract}
+
+
+\vskip -8.5pt
+
+
+ % removetitleabstract
+
+\noindent  
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Conserving biodiversity in the face of global change change increasingly
+requires conservation scientists and practitioners to prioritize
+locations for action (e.g., protection, restoration, or reintroduction
+of species). Developing practical solutions to conservation challenges
+requires understanding the role of the socio-political system in
+constraining or enabling the reduction of threats to species or
+ecosystems, the protection of priority areas, or the development of new
+conservation tools. Although considerable progress has been made in
+identifying where conservation should occur, evaluations of the
+socio-ecological conditions under which conservation does occur remain
+relatively rare \citep{williamson2018, ban2013}.
+
+Spatially explicit, empirical analyses of the factors that contribute to
+the emergence of various institutional (e.g., \citep{lubell2002ws}) and
+individual conservation actions (e.g., \citep{metcalf2019, nielsen2017})
+provide a critical starting point for evaluating the conditions that
+enable conservation to occur. These analyses often use correlative
+statistical models (e.g., logistic regression, maximum entropy) to
+identify key predictor variables and guide interpretation of regression
+coefficients (\textit{sensu} \citealp{lubell2002ws, kroetz2014}). These
+analyses take advantage of the growing availability of spatially
+extensive, high-resolution data describing social, institutional, and
+ecological attributes across a variety of geographies.
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+Sometimes you can add some math: \[
+\begin{aligned}
+y_{ij} &\sim \begin{cases}\operatorname{Bern}(p_{ij}) & z_{i} = 1 \text{ and } v_{ij} = 1\\
+0,& z_{i} = 0 \text{ or } v_{ij} = 0
+\end{cases},\\
+v_{ij} &\sim \begin{cases} \operatorname{Bern}(\alpha_{ij}) & z_{i}=1\\
+0, &z_{i} = 0
+\end{cases},\\
+z_i &\sim \mathrm{Bern}(\psi_i),
+\end{aligned}
+\] Or you can add a code chunk:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\KeywordTok{summary}\NormalTok{(iris))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}lccccc@{}}
+\toprule
+& Sepal.Length & Sepal.Width & Petal.Length & Petal.Width &
+Species\tabularnewline
+\midrule
+\endhead
+& Min. :4.300 & Min. :2.000 & Min. :1.000 & Min. :0.100 & setosa
+:50\tabularnewline
+& 1st Qu.:5.100 & 1st Qu.:2.800 & 1st Qu.:1.600 & 1st Qu.:0.300 &
+versicolor:50\tabularnewline
+& Median :5.800 & Median :3.000 & Median :4.350 & Median :1.300 &
+virginica :50\tabularnewline
+& Mean :5.843 & Mean :3.057 & Mean :3.758 & Mean :1.199 &
+NA\tabularnewline
+& 3rd Qu.:6.400 & 3rd Qu.:3.300 & 3rd Qu.:5.100 & 3rd Qu.:1.800 &
+NA\tabularnewline
+& Max. :7.900 & Max. :4.400 & Max. :6.900 & Max. :2.500 &
+NA\tabularnewline
+\bottomrule
+\end{longtable}
+
+\newpage
+\singlespacing 
+\bibliography{/Users/mattwilliamson/Hesweb/rmarkdownIntro/templatedocs/refs.bib}
+\end{document}

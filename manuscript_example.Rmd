@@ -1,0 +1,56 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: /Users/mattwilliamson/Hesweb/rmarkdownIntro/templatedocs/svm_ms_template.tex
+title: "Models incorporating incomplete reporting improve inferences about private land conservation"
+thanks: "Template files are available at Steven V. Miller's webpage (http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/)."
+author:
+- name: Matthew A. Williamson
+  affiliation: Boise State University
+- name: Brett G. Dickson
+  affiliation: Conservation Science Partners, Inc.
+- name: Mevin B. Hooten
+  affiliation: Colorado State University
+- name: Rose A. Graves
+  affiliation: Portland State University
+- name: Mark N. Lubell
+  affiliation: University of California, Davis
+- name: Mark W. Schwartz
+  affiliation: University of California, Davis
+abstract: "Developing practical solutions to conservation challenges requires prioritization approaches that integrate information describing where conservation should occur with that describing where it does occur. Empirical evaluation of the arrangement of social, institutional, and environmental factors that have previously produced conservation actions is a vital step in moving towards a more complete characterization of conservation opportunity. Many datasets describing conservation actions are incomplete, making analyses of predictors of those actions challenging and potentially prone to bias resulting in mis-identification of the factors that promote conservation and hindering the ability to identify locations where future conservation action may be likely. We adapt the occupancy model framework frequently deployed in wildlife population studies to the case of partially reported conservation actions and compare several different formulations of occupancy models to a naive logistic regression. Through a simulation study and an empirical evaluation of conservation easements in Idaho and Montana (United States), we find that occupancy models that explicitly account for the reporting process produce substantially less-biased estimates of regression coefficients than logistic regression and are robust to incomplete separation of the reporting and suitability process. Results from our case study suggest that occupancy-based models produced regression coefficient estimates that were more accurate, but less precise. Occupancy models also resulted in qualitatively different inferences regarding the effects of predictors we evaluated than those produced by the naive logistic regression."
+keywords: "pandoc, r markdown, knitr"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+# spacing: double
+bibliography: /Users/mattwilliamson/Hesweb/rmarkdownIntro/templatedocs/refs.bib
+---
+# Introduction 
+Conserving biodiversity in the face of global change change increasingly requires conservation scientists and practitioners to prioritize locations for action  (e.g., protection, restoration, or reintroduction of species). Developing practical solutions to conservation challenges requires understanding the role of the socio-political system in constraining or enabling the reduction of threats to species or ecosystems, the protection of priority areas, or the development of new conservation tools. Although considerable progress has been made in identifying where conservation should occur, evaluations of the socio-ecological conditions under which conservation does occur remain relatively rare [@williamson2018; @ban2013].
+
+Spatially explicit, empirical analyses of the factors that contribute to the emergence of various institutional (e.g., [@lubell2002ws]) and individual conservation actions (e.g., [@metcalf2019; @nielsen2017]) provide a critical starting point for evaluating the conditions that enable conservation to occur. These analyses often use correlative statistical models (e.g., logistic regression, maximum entropy) to identify key predictor variables and guide interpretation of regression coefficients (\textit{sensu} \citealp{lubell2002ws, kroetz2014}). These analyses take advantage of the growing availability of spatially extensive, high-resolution data describing social, institutional, and ecological attributes across a variety of geographies. 
+
+# Methods
+Sometimes you can add some math:
+$$
+\begin{aligned}
+y_{ij} &\sim \begin{cases}\operatorname{Bern}(p_{ij}) & z_{i} = 1 \text{ and } v_{ij} = 1\\
+0,& z_{i} = 0 \text{ or } v_{ij} = 0
+\end{cases},\\
+v_{ij} &\sim \begin{cases} \operatorname{Bern}(\alpha_{ij}) & z_{i}=1\\
+0, &z_{i} = 0
+\end{cases},\\
+z_i &\sim \mathrm{Bern}(\psi_i),
+\end{aligned}
+$$
+Or you can add a code chunk:
+```{r}
+knitr::kable(summary(iris))
+```
+
+
