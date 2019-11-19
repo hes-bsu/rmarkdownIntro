@@ -65,6 +65,53 @@ abline(Regression)
 * plot a histogram of the 'weight' variable in the PlantGrowth dataset
 
 * Use the kableExtra package to create atable of the regression results from a linear regression of the relationship between Sepal.Length and Petal.Length in the iris dataset.
+```{r packages, include=FALSE}
+require(kableExtra)
+require(broom)
+require(xtable)
+require(texreg)
+require(jtools)
+```
+
+```{r linear, print=F}
+# pretty names
+Petal <- iris$Petal.Length
+Sepal <- iris$Sepal.Length
+
+# model petal length as a function of sepal length
+ped_model <- lm(Petal~Sepal)
+
+# plot petal ~ sepal length, color by sepal bins
+plot(Petal~Sepal, col=Sepal)
+```
+
+
+The package jtools gives you all the outputs from your model summary
+```{r jtools}
+# create table using package jtools 
+summ(ped_model)
+```
+
+Using xtable, kable and kableExtra allows you to do some funky things with your model outputs
+```{r others}
+# create table with xtable and kable
+tab1 <- xtable(ped_model)
+
+kable(tab1, digits = 10, caption = "Petal length as dependant on Sepal length") %>%  
+  # insert kableExtra() arguments to your heart's content
+  kable_styling( full_width = F, bootstrap_options = c("striped", "hover", "condensed")) %>% 
+  column_spec(1, bold = T, border_right = T) %>%
+  column_spec(5, background = "lightblue")  %>% 
+  row_spec(0, bold = T, color = "green", background = "orange")
+```
+
+
+Not too pretty here, but will produce a nice table when you change the Rmd doc options to output: pdf_document
+```{r tex, echo=T}
+# to produce the code below
+texreg(list(ped_model), caption="Estimates Table", caption.above=T, float.pos = "h")
+```
+
 
 Remember, you can use ? to at the prompt to learn more about a command (e.g., ?plot will tell you about the usage of the plot command). Send me questions if you need help!! Good luck.
 
